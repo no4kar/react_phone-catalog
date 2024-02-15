@@ -1,28 +1,37 @@
-import React from 'react';
+import { useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from './store/hooks';
+import * as productsSlice from './features/productsSlice';
+
+import { Header } from './components/Header';
+import { Loader } from './components/Loader';
+import { Footer } from './components/Footer';
+
+import './styles/utils/main.scss';
 import './App.scss';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
+export const App = () => {
+  const dispatch = useAppDispatch();
+  const { loaded } = useAppSelector(state => state.products);
 
-export const Provider: React.FC<Props> = React.memo(
-  ({ onClick, children }) => (
-    <button
-      type="button"
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  ),
-);
+  useEffect(() => {
+    console.info('App->useEffect->dispatch(productsSlice.fetchProducts())');// eslint-disable-line
+    dispatch(productsSlice.fetchProducts());
+  }, [dispatch]);
 
-export const App: React.FC = () => {
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>
-        TodoList
-      </Provider>
+    <div className="App App__container page__body">
+      <div className="App__top">
+        <Header />
+
+        {!loaded ? (
+          <Loader />
+        ) : (
+          <Outlet />
+        )}
+      </div>
+
+      <Footer />
     </div>
   );
 };
