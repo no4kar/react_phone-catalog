@@ -30,3 +30,7 @@ Implementation Products catalog following [this design](https://www.figma.com/fi
   /\.(png|ico|svg|jpg|gif)$/,
 );`
     - or like this `import varsScss from '../styles/utils/export.module.scss';`
+
+## Additional
+1. Products API implemented by standard httpClient but it easily can be overwriting with [axios](https://axios-http.com/docs/intro).
+1. For DEMO only phones of one not very well-known brand are available on the server.
