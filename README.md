@@ -1,9 +1,4 @@
-# React TypeScript Starter Pack
+# Used for project
+  react, react-router-dom, redux, loadsh, webpack
 
-To use this template click `Use this template`
-
-### Available Scripts
-
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+[DEMO LINK](https://no4kar.github.io/react_phone-catalog/)
