@@ -5,7 +5,7 @@ Implementation Products catalog following [this design](https://www.figma.com/fi
 > Here is the [working DEMO](https://no4kar.github.io/react_phone-catalog/)
 
 ## Used for project
-1. React `<header>` with links to all the pages
+1. [React](https://legacy.reactjs.org/) main library that used for this project. For simplicity, a functional approach is used throughout.
     - The `Logo` and the `Nav` are aligned left
     - The `Favorites` and the `Cart` are aligned right
   React - main tehnology.
