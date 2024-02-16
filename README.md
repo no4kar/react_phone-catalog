@@ -6,22 +6,19 @@ Implementation Products catalog following [this design](https://www.figma.com/fi
 
 ## Used for project
 1. [React](https://legacy.reactjs.org/) main library that used for this project.
-    - For simplicity, a functional approach is used throughout
+    - for simplicity, a functional approach is used throughout
 1. [TS](https://legacy.reactjs.org/).
     -  `TS` || `JSDoc + // @ts-check` || `without problems and safety` 
 1. [SASS](https://sass-lang.com/) external file is main approach for component's styling.
-    - Only `./src/components/Slider/Slider.tsx` uses inline style object
+    - only `./src/components/Slider/Slider.tsx` uses inline style object
 1. [React-router-dom](https://reactrouter.com/en/main).
     - to create a single-page application
     - interact with query and search params
 1. [Redux](https://redux.js.org/) instead `React.createContext()`.
-    - For simplicity data store management
-    - The `Favorites` and `Cart` are used in many components, stored in localStorage, but managed in their own slices
+    - for simplicity data store management
+    - the `Favorites` and `Cart` are used in many components, stored in localStorage, but managed in their own slices
     - interact with query and search params
-1. [Loadsh](https://lodash.com/) instead `React.createContext()`.
-    - `lodash.debounce` for small search latency
-    - `lodash.isequal` for [HOC](https://legacy.reactjs.org/docs/higher-order-components.html) [React.memo()](https://react.dev/reference/react/memo)
-1. [Loadsh](https://lodash.com/) instead `React.createContext()`.
+1. [Lodash](https://lodash.com/) instead `React.createContext()`.
     - `lodash.debounce` for small search latency
     - `lodash.isequal` for [HOC](https://legacy.reactjs.org/docs/higher-order-components.html) [React.memo()](https://react.dev/reference/react/memo)
 1. [Webpack](https://webpack.js.org/) for some tricks.
